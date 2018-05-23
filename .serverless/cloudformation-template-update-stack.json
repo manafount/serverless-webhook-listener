@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/github-webhook-listener/dev/1527048429785-2018-05-23T04:07:09.785Z/github-webhook-listener.zip"
+          "S3Key": "serverless/github-webhook-listener/dev/1527052414957-2018-05-23T05:13:34.957Z/github-webhook-listener.zip"
         },
         "FunctionName": "github-webhook-listener-dev-githubWebhookListener",
         "Handler": "handler.githubWebhookListener",
@@ -106,7 +106,9 @@
         "Runtime": "nodejs8.10",
         "Timeout": 6,
         "Environment": {
-          "Variables": {}
+          "Variables": {
+            "GITHUB_WEBHOOK_SECRET": "c2f29b1ef12a73662fa56f315bbe8999"
+          }
         }
       },
       "DependsOn": [
@@ -114,14 +116,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GithubWebhookListenerLambdaVersion759cKwXCXRSUKB0WkWcof3R7XS1Lg3ccR2kTt8LBoI": {
+    "GithubWebhookListenerLambdaVersionltvtXGhV9tBdYKoBKd0Cvp8Pj1ms9xbqwYd738HfmBM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GithubWebhookListenerLambdaFunction"
         },
-        "CodeSha256": "5HuCquqncLhCXZW6mGDDeWf8yvfRy0FCZze9AxWji1o="
+        "CodeSha256": "aKhb8yLLAP186qGDE7b1V+bqXI0+DMocIW9ZvNLNOFE="
       }
     },
     "ApiGatewayRestApi": {
@@ -239,7 +241,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1527048429796": {
+    "ApiGatewayDeployment1527052414970": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -308,7 +310,7 @@
     "GithubWebhookListenerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GithubWebhookListenerLambdaVersion759cKwXCXRSUKB0WkWcof3R7XS1Lg3ccR2kTt8LBoI"
+        "Ref": "GithubWebhookListenerLambdaVersionltvtXGhV9tBdYKoBKd0Cvp8Pj1ms9xbqwYd738HfmBM"
       }
     },
     "ServiceEndpoint": {
